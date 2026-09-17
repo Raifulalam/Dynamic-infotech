@@ -2,12 +2,19 @@
 
 import React, { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import Modal from "./Modal";
+
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [solutionOpen, setSolutionOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+  
+
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -200,8 +207,9 @@ export default function Header() {
 
          
             <div className="flex items-center gap-3">
-
+    
               <button
+                onClick={()=>setIsModalOpen(true)}
                 className="bg-[#DDEFFF] hover:bg-[#cbe6fe] text-(--main-color)  font-bold text-sm px-2 lg:px-6 py-3 rounded-sm transition-colors uppercase tracking-wide"
               >
                 BOOK A DEMO
@@ -447,6 +455,11 @@ export default function Header() {
         )}
 
       </div>
+       <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </header>
+    
   );
 }

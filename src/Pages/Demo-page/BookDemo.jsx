@@ -1,14 +1,18 @@
-import React from 'react'
-import './Modal.css';
-
-const Modal = ({ isOpen, onClose }) => {
-  if (!isOpen) return null; 
-
+import React, { useState } from 'react'
+import Modal from '../../components/Modal'
+export default function BookDemo() {
+    const[isModalOpen,setisModalOpen]=useState(true);
+  
+    const handleCose=()=>{
+        setisModalOpen(false);
+    }
+ 
+  
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/50 backdrop-blur-sm p-4 overflow-y-auto">
         <div className="relative w-full max-w-5xl bg-white rounded-lg shadow-2xl p-4 sm:p-8 md:p-10 mt-10">
       
-             <button onClick={onClose} className="absolute top-1 right-1 sm:top-4 sm:right-4 bg-black text-white rounded-full p-1 hover:bg-gray-800 transition-colors">
+             <button onClick={handleCose} className="absolute top-1 right-1 sm:top-4 sm:right-4 bg-black text-white rounded-full p-1 hover:bg-gray-800 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -119,7 +123,5 @@ const Modal = ({ isOpen, onClose }) => {
             </form>
         </div>
     </div>
-  );
-};
-
-export default Modal;
+  )
+}
