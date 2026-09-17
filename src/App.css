@@ -1,0 +1,148 @@
+@import "tailwindcss";
+:root {
+  --main-color: #3498db;
+  --padding-size: 15px;
+  --background-color:#DDEFFF;
+  --hover:#cbe6fe;
+  --secondary--bg: #0e4b81;
+  --primary--bg: #dbecf9;
+}
+
+
+.button {
+  background-color: var(--background-color);
+  padding: var(--padding-size);
+}
+.text-primary {
+    color: #242360;
+}
+.swiper {
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    list-style: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.swiper-horizontal {
+    touch-action: pan-y;
+}
+.w-full {
+    width: 100%;
+}
+
+
+.swiper-slide,.swiper-wrapper {
+    transform: translate(0, 0);
+}
+
+
+
+.swiper-wrapper {
+    z-index: 1;
+    height: 100%;
+    transition-property: transform;
+    box-sizing: content-box;
+    display: flex;
+    position: relative;
+    
+}
+
+.carousel-container{
+  display: flex;
+}
+
+
+.carousel-img{
+  display: flex;
+ justify-content: center;
+ padding: 5px 12px;
+transition:transform 0.5s ease-in-out;
+
+}
+.carousel-img img{
+  width: 100%;
+  height:250px;
+  transition:transform 0.5s ease-in-out;
+}
+
+
+
+
+
+
+
+
+.btn-prev { left: 0px; }
+.btn-next { right: 0px; }
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+
+
+
+
+
+.carousel-window {
+  overflow: hidden;
+  border-radius: 8px;
+  width: 100%;
+  height: 300px;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+
+  transition: transform 0.2s ease-in-out; 
+}
+.conatiner{
+  width: 100%;
+}
+
+.carousel-item {
+display: flex;
+  min-width: 100%;
+ 
+
+}
+
+
+
+.prev { left: -20px; }
+.next { right: -20px; }
+
+
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background 0.2s, transform 0.1s active;
+  z-index: 10;
+  color: white;
+}
