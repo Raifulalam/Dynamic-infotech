@@ -58,7 +58,7 @@ const handleLogin=()=>{
 
           
               <a
-                href="#"
+                href="/"
                 className="text-gray-800 hover:text-[var(--primary)] font-bold text-sm transition-colors"
               >
                 Home
@@ -77,7 +77,7 @@ const handleLogin=()=>{
                 <div className="absolute top-10 left-0 w-75 bg-white shadow-xl rounded-b-lg   opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 opacity-100  ">
                   <div className="py-2 ">
                     <a
-                    href="#"
+                    href="/distribution-operation-platform"
                     className="flex items-center justify-between px-6 py-3 hover:bg-blue-50 transition-colors group/item"
                   >
                     Distributor Operations Platform
