@@ -146,3 +146,9 @@ display: flex;
   z-index: 10;
   color: white;
 }
+
+
+.background{
+  background: linear-gradient(#0b2545d9,#051125e6);
+  
+}    

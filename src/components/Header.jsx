@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Modal from "./Modal";
+import { Link } from "react-router-dom";
 
 
 export default function Header() {
@@ -14,7 +15,10 @@ export default function Header() {
 
 
   
+const handleLogin=()=>{
+  window.location.href = '/login'
 
+}
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -216,6 +220,7 @@ export default function Header() {
               </button>
 
               <button
+              onClick={handleLogin}
                 className="bg-[#DDEFFF] hover:bg-[#cbe6fe] text-(--main-color)  font-bold text-sm px-2 lg:px-6 py-3 rounded-sm transition-colors  tracking-wide"
               >
                 Log in
