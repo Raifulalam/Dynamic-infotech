@@ -1,7 +1,12 @@
-import React from 'react'
+import React ,{useState}from 'react'
 import FeatureTabs from '../components/Features'
 import DistributionNetwork from '../components/DistributionNetwork'
+import Modal from '../components/Modal'
+import WhyChooseUs from '../components/Whychooseus'
+import FAQ from '../components/FAQ'
 export default function DistributionOperationPlatform() {
+       const[isOpen,setIsOpen]=useState(false);
+
   return (
    <div>
        <section className="bg-white w-full py-5 sm:10 md:py-20 px-3 sm:px-6 lg:px-8 ">
@@ -37,7 +42,9 @@ export default function DistributionOperationPlatform() {
               Unlock your business potential with our cutting-edge software. Streamline order processing, optimise inventory management, and leverage data analytics for informed decision-making. Achieve excellence and accelerate your growth trajectory today.
             </p>
             <div className="pt-4 mb-4">
-              <button className=" bg-[#0e4b81] text-white px-5 py-2 rounded-md font-bold active:scale-95 ">
+              <button className=" bg-[#0e4b81] text-white px-5 py-2 rounded-md font-bold active:scale-95 "
+              onClick={()=>setIsOpen(true)}
+              >
                 Book A Demo
               </button>
             </div>
@@ -104,6 +111,12 @@ export default function DistributionOperationPlatform() {
         </div>
       </section>
       <DistributionNetwork/>
+      <WhyChooseUs/>
+      <FAQ/>
+        <Modal
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      />
    </div>
   )
 }

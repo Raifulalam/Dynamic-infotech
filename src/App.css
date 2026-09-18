@@ -16,6 +16,9 @@
 .text-primary {
     color: #242360;
 }
+.bg-primary {
+    background-color: #dbecf9;
+}
 .swiper {
     z-index: 1;
     margin-left: auto;

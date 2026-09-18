@@ -67,7 +67,7 @@ export default function FeatureTabs() {
   return (
     <section className="feature-section">
     <div className="relative max-w-5xl mx-auto mb-4 sm:mb-16 px-6 sm:px-12">
-         <div className="flex ">
+         <div className="flex overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory  [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]  ">
 
 
         {features.map((feature) => (
