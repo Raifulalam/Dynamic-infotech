@@ -1,5 +1,6 @@
 import React from 'react'
-
+import FeatureTabs from '../components/Features'
+import DistributionNetwork from '../components/DistributionNetwork'
 export default function DistributionOperationPlatform() {
   return (
    <div>
@@ -46,11 +47,12 @@ export default function DistributionOperationPlatform() {
           
         </div>
       </section>
+
       <section className="bg-(--primary--bg) relative w-full py-5 sm:10 md:py-20 px-3 sm:px-6 lg:px-8 ">
         <div className="max-w-7xl mx-auto sm:px-4 ">
-          <div className="    grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center">
             
-             <div className="relative w-full lg:h-full">
+             <div className="space-y-4 sm:space-y-8">
            
             <h1 className="font-black text-primary leading-[1.1] text-3xl font-bold mb-8">
             Experience <span className="text-(--main-color)">Unmatched Efficiency</span> With salesfusion DMS
@@ -77,6 +79,34 @@ export default function DistributionOperationPlatform() {
           
         </div>
       </section>
+
+      <section className="bg-white relative w-full py-5 sm:10 md:py-20 px-3 sm:px-6 lg:px-8 ">
+        <div className="container mx-auto px-3 sm:px-6">
+          <div className="text-center max-w-4xl mx-auto mb-4 sm:mb-16">
+            <h1 className="text-[#44a5db] mb-4 sm:mb-6 font-bold text-3xl">
+           Core Features of BrandBuddy
+            </h1>
+             <p className="text-slate-600  mb-4 sm:mb-6">
+               BrandBuddy is more than just an in-shop promoter app. It’s a full-featured operational engine built for fast, secure, and reliable execution of in-store campaigns. We close the visibility loop between planning and performance.
+              </p>
+                <div className="inline-block px-3 sm:px-6 py-2 bg-slate-50 rounded-full border border-slate-100 text-slate-600 font-medium">
+                What makes BrandBuddy a must-have tool for retail management?
+              </div>
+           
+          
+            </div>
+         <div className="">  
+          <FeatureTabs/>
+          </div> 
+         
+         
+          
+        </div>
+      </section>
+      <DistributionNetwork/>
    </div>
   )
 }
+
+
+
